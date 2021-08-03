@@ -5,10 +5,9 @@ import time
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
 try:
-    #oldal betöltése
+    # oldal betöltése
     driver.get("https://witty-hill-0acfceb03.azurestaticapps.net/mutant_teams.html")
     time.sleep(2)
-
 
     character_count = 0
     character_list = []
@@ -38,12 +37,7 @@ try:
     print(len(character_list))
 
 
-characters_xpath = driver.find_elements_by_xpath("//div/ul/li" and "")
-
-
-
-
 
 finally:
-    pass
-    #driver.close()
+pass
+# driver.close()

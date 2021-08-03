@@ -24,7 +24,7 @@ try:
 
 # nehéz feladat még nekem, több idő kellene rá. de valahogyan végigmennék az elemeken(data-pos) talán for ciklussal,
 # megnézném, hány elemből áll, majd assertel megnézném, hány elemből áll a data.txt fájl.
-#vagy összehasonlítanám, hogy megegyeznek-e a nevek.
+#vagy összehasonlítanám, hogy megegyeznek-e a nevek és a sorszámok.
 
 finally:
     pass

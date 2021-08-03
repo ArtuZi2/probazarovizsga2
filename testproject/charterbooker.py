@@ -44,14 +44,8 @@ try:
 
 #TC2 Válasz ellenőrzése
 
-    """main_window = driver.window_handles[0]
-    driver.execute_script("window.open('', 'viewport', 'height=800,width=600')")
-    new_window = driver.window_handles[1]
-    driver.switch_to_window(new_window)
-    driver.get("https://witty-hill-0acfceb03.azurestaticapps.net/charterbooker.html")
-    szoveg = driver.find_elements_by_xpath("//*[@id='booking-form']/h2")
-    print(szoveg)
-
+    """szoveg = driver.find_elements_by_xpath("//*[@id='booking-form']/h2")
+    print(szoveg.text)
 
     message = "Your message was sent successfully. Thanks! We'll be in touch as soon as we can," \
               "which is usually like lightning (Unless we're sailing or eating tacos!)."
@@ -89,14 +83,12 @@ try:
     reques.click()
     time.sleep(2)
 
-    message = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.ID, "bf_email-error"))
-                                              .get_attribute("validationMessage"))
+    message = driver.find_element_by_id("bf_email-error")
     valid = "Please enter a valid email address."
     assert message is not None
-    assert message == valid
-
+    assert message.text == valid.upper()
 
 
 finally:
     pass
-    #driver.close()
+    driver.close()
